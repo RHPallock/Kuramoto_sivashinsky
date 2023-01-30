@@ -1,3 +1,3 @@
 # Kuramoto_sivashinsky
 
-The repo will disect the KS equation.
+The repo will cheese the KS equation.
