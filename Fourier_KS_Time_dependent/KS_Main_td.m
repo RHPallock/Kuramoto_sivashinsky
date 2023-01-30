@@ -1,21 +1,17 @@
 clear all, close all, clc
-% Rumayel Hassan Pallock
-% KS time dependent simulation
-% Date 1/30/2023
-
 
 % Define spatial domain
 c = 2;
 L = 22;
-N = 4;
+N = 60;
 dx = L/N;
-x = -L/2:dx:L/2;
+x = -L/2:dx:L/2-dx;
 
 global iter
 iter = 1;
 
 % Define discrete wavenumbers
-kappa = (2*pi/L)*[-N/2:N/2];
+kappa = (2*pi/L)*[-N/2:N/2-1];
 kappa = fftshift(kappa');
 
 % Initial condition
@@ -25,9 +21,9 @@ uhat0 = fft(u0);
 %simulate using ode45
 dt = 0.01;
 t = 0:dt:10000*dt;
-[t u] = ode45(@(t,u) F_(u,kappa,c),t,u0);
+[t u] = ode45(@(t,u) F_(t,u,kappa,c),t,u0);
 
-for k = 1:10:length(t)
+for k = 1:1:length(t)
     plot(x,u(k,:));
     %xlim([-10 10]);
     %ylim([0 1.2]);
