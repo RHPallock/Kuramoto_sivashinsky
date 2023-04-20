@@ -12,6 +12,6 @@ reltol = 1.0e-10; abstol = 1.0e-10;
 options = odeset('RelTol',reltol,'AbsTol',abstol);
 [T,X] = ode45(@F_,[0,T0],X0,options);
 
-X_final = X(end,:)';
+X_final = X(end,:).';
 
 end
