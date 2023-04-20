@@ -20,9 +20,9 @@ phi(:,1:n+1) = [];
 
 
 % Only take the last entries.
-STM_output = [phi(end,1:nt/(n+1))'];
+STM_output = [phi(end,1:nt/(n+1)).'];
 for k = 1:n
-    STM_output = cat(2,STM_output,phi(end,((k*nt/(n+1))+1):(k+1)*(nt/(n+1)))');
+    STM_output = cat(2,STM_output,phi(end,((k*nt/(n+1))+1):(k+1)*(nt/(n+1))).');
 end
 
 end
