@@ -14,3 +14,5 @@ KS_Fourier_NR V2 TW == Uses newton raphson to find Travelling wave listed in thi
 + On the state space geometry of the Kuramoto-Sivashinsky flow in a periodic domain
 - Predrag Cvitanović, Ruslan L. Davidchack, Evangelos Siminos
 ```
+
+KS_GD_Using_Adjoint_Operator:  Folder contains the use of adjoint operator to find equilibriums of KS equation
